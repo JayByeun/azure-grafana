@@ -1,0 +1,41 @@
+{
+  "annotations": {"list": []},
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Device Temperature",
+      "fieldConfig": {"defaults":{"unit":"celsius"},"overrides":[]},
+      "targets":[
+        {
+          "refId":"A",
+          "datasource":{"type":"simpod-json-datasource","uid":null},
+          "jsonPath":"$[*]",
+          "timeField":"$.CreatedAt",
+          "valueField":"$.Temperature",
+          "seriesField":"$.DeviceId"
+        }
+      ],
+      "gridPos":{"x":0,"y":0,"w":12,"h":8}
+    },
+    {
+      "type": "timeseries",
+      "title": "Device Humidity",
+      "fieldConfig":{"defaults":{"unit":"percent"},"overrides":[]},
+      "targets":[
+        {
+          "refId":"B",
+          "datasource":{"type":"simpod-json-datasource","uid":null},
+          "jsonPath":"$[*]",
+          "timeField":"$.CreatedAt",
+          "valueField":"$.Humidity",
+          "seriesField":"$.DeviceId"
+        }
+      ],
+      "gridPos":{"x":0,"y":8,"w":12,"h":8}
+    }
+  ],
+  "schemaVersion":36,
+  "title":"Sensor Dashboard",
+  "version":1,
+  "uid":"sensor-dashboard"
+}
