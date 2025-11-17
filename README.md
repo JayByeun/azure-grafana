@@ -25,14 +25,6 @@ This is a **fully local, free-tier project** that demonstrates real-time IoT sen
 
 ---
 
-## Good to have 💼
-
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [Docker Compose](https://docs.docker.com/compose/)
-- Optional: [VS Code + SQL Server extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) to inspect SQL Edge database
-
----
-
 ## Project Structure 🦴
 
 ```
@@ -91,6 +83,8 @@ azure-grafana/
 
 ```
 
+---
+
 ## How to build and start containers 🖥️
 
 ```
@@ -98,16 +92,6 @@ docker-compose build
 docker-compose up -d
 
 ```
-
-## Access Grafana
-
-- Open browser: http://localhost:3000
-- Login: admin / admin
-
-## Import Dashboard:
-
-- Dashboards → Import → sensor-dashboard.json
-- The dashboard will show live-updating temperature & humidity graphs
 
 ## How it works 🏃‍♀️
 
